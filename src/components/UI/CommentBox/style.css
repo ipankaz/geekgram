@@ -1,0 +1,79 @@
+div.userCommentBox{
+    /* border: 1px solid black; */
+    display: flex;
+    padding: 10px 0 10px 0;
+}
+div.userCommentBox div.userProfilePicture{
+    margin-right: 10px;
+}
+div.userCommentBox div.userProfilePicture img{
+    width: 30px;
+    border-radius: 50%;
+    
+}
+div.userCommentBox div.userCommentSection{
+    box-shadow:  9px 9px 18px #9b9b9b,
+    -9px -9px 18px #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px 10px 0px 10px;
+    position: relative;
+    width: 95% !important;
+    margin-bottom: 10px;
+}
+
+div.userCommentBox div.userCommentSection .username{
+    display: inline-block;
+}
+
+div.userCommentBox div.userCommentSection .username span{
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: rgb(59, 55, 55);
+}
+
+div.userCommentBox div.userCommentSection .username a{
+  text-decoration: none;
+}
+
+div.userCommentBox div.userCommentSection .userComment{
+  margin-top: 5px;
+}
+
+div.userCommentBox div.userCommentSection .userComment p{
+  font-size: 0.7rem;
+  font-weight: 400;
+  word-break: break-all;
+}
+
+div.userCommentBox div.userCommentSection div.userCommentDeleteIcon ion-icon{
+  /* color: red; */
+  font-size: 1rem;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin-right: 20px;
+}
+
+@media (max-width:500px){
+    div.userCommentBox div.userProfilePicture img{
+        width: 25px;
+    }
+    div.userCommentBox div.userCommentSection .username span{
+        font-size: 0.7rem;
+       
+    }
+    div.userCommentBox div.userCommentSection .userComment p{
+        font-size: 0.6rem;
+      }
+      div.userCommentBox div.userCommentSection div.userCommentDeleteIcon ion-icon{
+        /* color: red; */
+        font-size: 0.8rem;
+        
+      }
+      div.userCommentBox div.userCommentSection{
+        border-radius: 8px;
+        padding: 5px 10px 0px 10px;
+    }
+}

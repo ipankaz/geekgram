@@ -1,0 +1,229 @@
+div.post-11{
+    margin-top:40px;
+    /* border: 1px solid black; */
+    border-radius:10px;
+    box-shadow:  9px 9px 18px #9b9b9b,
+    -9px -9px 18px #ffffff;
+}
+
+.profilePost-11 {
+    display:flex;
+    padding:15px;
+    position: relative;
+}
+.profilePost-11 span.usernamePost-11{
+    margin: -4px 5px 0 10px;
+    /* align-self: center; */
+    font-weight: 500;
+   cursor: pointer;
+}
+
+.profilePost-11 span.sloganPost-11{
+    /* align-self: center; */
+    margin-top: -3px;
+    font-size:0.8rem;
+    color:#4E4E50
+}
+.post-11 div.timePost-11{
+    font-size:0.6rem;
+    position: relative;
+    top: -33px;
+    left: 55px;
+    display: inline-block;
+}
+
+div.post-11 div.dropDownIcon ion-icon{
+    margin-right: 20px;
+}
+
+.profilePost-11 .profilePic-11 img{
+width:30px;
+border-radius:50%;
+cursor: pointer;
+}
+
+.post-11{
+padding-bottom: 15px;
+margin-bottom:40px
+}
+
+.post-11 .descriptionPost-11 p{
+    padding:0 15px 8px 15px;
+    text-align: left;
+    font-size:0.8rem;
+    margin-top: -20px;
+    outline: none;
+}
+.post-11 .descriptionPost-11 span{
+    padding:0 15px 8px 15px;
+    font-size:0.8rem;
+    margin-top: -20px;
+}
+.post-11 div.uploadedMedia-11 img{
+    display: block;
+    margin : 0 auto;
+    width: 100%;
+}
+
+.post-11 .likesCommentsPost-11 span.likesPost-11{
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.post-11 .likesCommentsPost-11 span.commentsPost-11{
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.post-11 .likesCommentsPost-11{
+    display:flex;
+    padding:15px;
+    justify-content:space-between;
+}
+.post-11 .likeCommentIcon-11{
+    display:flex;
+    padding:10px 40px 0px 40px;
+    margin: 0 15px 15px 15px;
+    justify-content:space-between;
+    border-bottom: 1px solid #4E4E50;
+    border-top: 1px solid #4E4E50;
+    
+}
+.post-11 .likeCommentIcon-11 .likePost-11{
+display:flex;
+}
+.post-11 .likeCommentIcon-11 .commentPost-11{
+display:flex;
+}
+.post-11 .likeCommentIcon-11 .likePost-11 span{
+    cursor: pointer;
+}
+.post-11 .likeCommentIcon-11 .commentPost-11 span{
+    cursor: pointer;
+}
+
+.post-11 .likeCommentIcon-11 .likeIcon-11 ion-icon{
+position: relative;
+margin-right: 10px;
+font-size: 1.3rem;
+box-sizing: border-box;
+/* margin-top:5px; */
+}
+
+.post-11 .likeCommentIcon-11 .commentIcon-11 ion-icon{
+position: relative;
+margin-right: 10px;
+font-size: 1.3rem;
+box-sizing: border-box;
+/* margin-top:5px; */
+}
+.post-11 div.writeComment-11 {
+    width: 83%;
+    margin: 0 auto;
+    position: relative; 
+    box-sizing: border-box;
+    border-radius:4px;
+    box-shadow: inset 9px 9px 18px #9b9b9b,
+            inset -9px -9px 18px #ffffff;
+    overflow: hidden;
+    /* margin-bottom: 15px; */
+}
+.post-11 div.writeComment-11 input{
+    outline:none;
+    border: none;
+    width: 90%;
+    box-sizing: border-box;
+    padding:15px;
+    font-size: 0.8rem;
+    background-color: transparent;
+}
+.post-11 div.writeComment-11 ion-icon{
+    position: absolute;
+    right: 15px;
+    margin-top:15px
+}
+.post-11 .writeCommentSection-11{
+    display:flex;
+}
+
+.post-11 .writeCommentSection-11 .profilePic-11{
+    align-self: center;
+    margin-left: 15px;
+}
+
+.post-11 .writeCommentSection-11 .profilePic-11 img{
+    width:35px;
+    border-radius:50%;
+    
+ }
+ div.profilePost-11 div.dropDownIcon ion-icon{
+     margin-top: -8px;
+ }
+
+ @media (max-width:500px){
+
+    .profilePost-11 span.usernamePost-11{
+        font-size: 13px;
+    }
+    .profilePost-11 span.sloganPost-11{
+        font-size: 0.6rem;
+        
+    }
+    .post-11 div.timePost-11{
+        font-size:0.5rem;
+        position: relative;
+        left: 50px;
+        display: inline-block;
+    }
+
+    .profilePost-11 .profilePic-11 img{
+        width:25px;
+    }
+    .post-11 .descriptionPost-11 p{
+        font-size: 0.7rem;
+    }
+
+    .post-11 .likesCommentsPost-11 span.likesPost-11{
+        font-size: 0.8rem;
+    }
+    .post-11 .likesCommentsPost-11 span.commentsPost-11{
+        font-size: 0.8rem;
+    }
+    .post-11 .likesCommentsPost-11{
+        padding:10px;
+    }
+    .post-11 .likeCommentIcon-11{
+        padding:7px 40px -3px 40px;
+        margin: 0 10px 15px 10px;
+    }
+
+    .post-11 .likeCommentIcon-11 .likePost-11 span{
+        font-size:0.9rem
+    }
+    .post-11 .likeCommentIcon-11 .commentPost-11 span{
+        font-size:0.9rem
+    }
+    
+    .post-11 .likeCommentIcon-11 .likeIcon-11 ion-icon{
+        font-size:1.2rem
+    }
+    
+    .post-11 .likeCommentIcon-11 .commentIcon-11 ion-icon{
+        font-size:1.3rem
+    }
+
+    .post-11 .writeCommentSection-11 .profilePic-11 img{
+        width:7vw;
+        border-radius:50%;
+        
+     }
+     .post-11 div.writeComment-11 input{
+         padding:3vw;
+     }
+     .post-11 div.writeComment-11 ion-icon{
+         margin-top: 2.8vw;
+         font-size: 5vw;
+     }
+     div.profilePost-11 div.dropDownIcon ion-icon{
+        font-size: 1.1rem;
+        margin-top: -5px;
+    }
+}

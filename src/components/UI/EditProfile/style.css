@@ -1,0 +1,81 @@
+div.edit-profile-container{
+    margin-top: 2rem;
+    text-align: center;
+    /* background-color: red; */
+    
+
+}
+div.edit-profile-container div.input-items{
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+div.edit-profile-container div.input-items .profile-input{
+    padding: 13px 13px 13px 17px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 13px;
+    background-color: #e0e0e0;
+    box-shadow: inset 9px 9px 18px #9b9b9b,
+    inset -9px -9px 18px #ffffff;
+}
+
+div.edit-profile-container div.input-items div.user-name{
+    display: flex;
+    width: 91%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+div.edit-profile-container div.input-items div.user-name input{
+    width: 47%;
+
+}
+div.edit-profile-container div.input-items div.username-contact{
+    display: flex;
+    width: 91%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+div.edit-profile-container div.input-items div.username-contact input{
+    width: 47%;
+}
+
+div.edit-profile-container div.input-items div.user-bio{
+    margin-bottom: 25px;
+}
+div.edit-profile-container div.input-items div.user-bio textarea{
+  width: 91%;
+}
+div.edit-profile-container div.input-items div.finalize{
+    margin: 0 auto;
+    display: inline-block;
+    justify-self: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+div.edit-profile-container div.input-items div.finalize button{
+    /* text-align: center; */
+    margin: 0 auto;
+    display: block;
+    width: 91%;
+    background-color: #5995fd;
+    color: #fff;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-weight: 500;
+}
+div.edit-profile-container div.input-items div.finalize button:hover{
+ background-color: #4486f7;
+}
+
+@media (max-width:500px){
+    div.edit-profile-container div.input-items{
+        width: 100%;
+    }
+}

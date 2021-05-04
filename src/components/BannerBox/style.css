@@ -1,0 +1,345 @@
+div.banner-box {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 4rem;
+  }
+
+  div.banner-box .container-1{
+    margin-top: 2rem;
+  }
+  
+  div.banner-box div.cover-photo-blur {
+    position: relative;
+    border-bottom: 1px solid #4E4E50;
+  }
+  
+  div.banner-box div.cover-photo-blur > img {
+    display: block;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    filter: blur(20px);
+    z-index: -2;
+  }
+  div.banner-box div.cover-photo-blur div.profile-cover-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  div.banner-box div.cover-photo-blur div.cover-photo {
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-content: center;
+    text-align: center;
+  }
+  div.banner-box div.cover-photo-blur div.cover-photo div.cover-pic {
+    display: inline-block;
+    position: relative;
+  }
+  
+  div.banner-box div.cover-photo-blur div.cover-photo div.cover-pic > img {
+    border-radius: 15px;
+    height: 400px;
+    width: 850px;
+    object-fit: cover;
+    z-index: 1;
+  }
+  div.banner-box div.cover-photo-blur div.profile-photo {
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  
+  div.banner-box div.cover-photo-blur div.profile-photo img {
+    border-radius: 50%;
+    border: 3px solid white;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    z-index: 5;
+  }
+  div.banner-box div.cover-photo-blur div.profile-icon {
+    position: relative;
+    display: inline-block;
+  }
+
+  div.banner-box
+    div.cover-photo-blur
+    div.profile-photo
+    input{
+      display: none;
+    }
+
+    div.banner-box div.cover-photo-blur div.profile-photo label{
+      margin-bottom: 0;
+      display:block;
+    }
+
+  div.banner-box
+    div.cover-photo-blur
+    div.profile-photo
+    div.change-profile-pic-icon
+    ion-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 5px;
+    z-index: 40;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+  }
+  
+  div.banner-box div.cover-photo-blur div.username {
+    text-align: center;
+    z-index: 3;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  div.banner-box div.cover-photo-blur div.user-bio {
+    text-align: center;
+    z-index: 4;
+    font-size: 1rem;
+    color :#4E4E50;
+  }
+ 
+  div.banner-box div.cover-photo div.save-cover {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    z-index: 7;
+    margin-bottom: 60px;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 5px;
+    background-color: #4BB543;
+  }
+  div.banner-box div.cover-photo div.save-cover ion-icon {
+    position: relative;
+    margin-top: 5px;
+    margin-right: 10px;
+    color: #ffffff;
+  }
+  div.banner-box div.cover-photo div.save-cover span {
+    padding: 6px 8px 6px 8px;
+    outline: none;
+    cursor: pointer;
+    z-index: 90;
+    color: #ffffff;
+  }
+  div.banner-box div.cover-photo div.change-cover {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    z-index: 7;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #ffffff;
+  }
+  div.banner-box div.cover-photo div.change-cover input{
+    display: none;
+  }
+  div.banner-box div.cover-photo div.change-cover label{
+    margin-bottom: 0;
+  }
+  div.banner-box div.cover-photo div.change-cover>label{
+   align-self: center;
+  }
+
+  div.banner-box div.cover-photo div.change-cover ion-icon {
+    position: relative;
+    margin-top: 5px;
+    margin-right: 10px;
+  }
+  div.banner-box div.cover-photo div.change-cover span {
+    padding: 3px 8px 3px 8px;
+    outline: none;
+    cursor: pointer;
+    z-index: 90;
+   
+  }
+
+  div.banner-box div.follow-unfollow{
+   
+    margin-bottom: 20px;
+
+  }
+
+  div.banner-box div.follow-unfollow div.follow{
+    z-index: 7;
+    box-sizing: border-box;
+    display: flex;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    background-color: #ffffff;
+    position: relative;
+    /* display: inline-block; */
+    width: 95px;
+    margin: 0 auto;
+    
+  }
+
+  div.banner-box div.follow-unfollow div.follow span{
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    cursor: pointer;
+    z-index: 90;
+  }
+  div.banner-box div.follow-unfollow div.follow div.follow-icon ion-icon{
+    position: absolute;
+    right: 7px;
+    margin-top: 6px;
+    font-size: 20px;
+  }
+
+  div.banner-box div.mini-bar{
+    width: 850px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-top: 1px solid #4E4E50;
+  } 
+  div.banner-box div.mini-bar div.mini-links ul{
+     display: flex;
+     justify-content: space-between;
+  }
+  div.banner-box div.mini-bar div.mini-links ul li.mini-bar-item a{
+    padding: 5px;
+    box-sizing: border-box;
+    color: #4E4E50;
+    text-decoration: none;
+  }
+
+  div.banner-box div.mini-bar div.mini-links ul li.active a{
+      color: #007bff;
+  }
+
+   
+  .my-modal div.modal-body div.profile-preview img{
+    width: 100%;
+  }
+  .my-modal div.modal-body div.profile-preview span{
+    color: red;
+    width: 100%;
+  }
+  
+  
+  @media (max-width: 500px){
+    div.banner-box div.cover-photo-blur div.username {
+      font-size: 1.2rem;
+    }
+    div.banner-box div.cover-photo-blur div.user-bio {
+      font-size: 0.6rem;
+    }
+    div.banner-box div.mini-bar div.mini-links ul li a{
+     font-size: 0.8rem;
+  }
+  div.banner-box div.mini-bar{
+    padding: 7px;
+  }
+  div.banner-box div.cover-photo-blur div.profile-photo img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* div.banner-box div.cover-photo-blur > img {
+    height: 500px;
+  } */
+  }
+
+  @media (max-width: 600px) {
+    div.banner-box div.cover-photo div.change-cover ion-icon {
+      margin-top: 3px;
+    }
+    div.banner-box div.cover-photo div.change-cover {
+      right: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+    }
+    div.banner-box div.cover-photo-blur div.username {
+      font-size: 1.5rem;
+      
+    }
+    div.banner-box div.cover-photo-blur div.profile-photo img {
+      width: 110px;
+      height: 110px;
+    }
+    /* div.banner-box div.cover-photo-blur > img {
+      height: 400px;
+    } */
+  }
+  
+  @media (max-width: 770px) {
+    div.banner-box {
+      top: 3rem;
+    }
+    div.banner-box div.cover-photo div.change-cover ion-icon {
+      font-size: 3vw;
+    }
+    div.banner-box div.cover-photo div.change-cover {
+      font-size: 2vw;
+    }
+    div.banner-box div.cover-photo div.change-cover span {
+      padding: 4px 6px 4px 6px;
+    }
+    div.banner-box
+    div.cover-photo-blur
+    div.profile-photo
+    div.change-profile-pic-icon
+    ion-icon {
+      font-size: 3vw;
+    bottom: 1.5vw;
+    right: 0;
+    padding: 4px;
+  }
+
+  div.banner-box div.cover-photo-blur div.username {
+    font-size: 1.7rem;
+    
+  }
+  div.banner-box div.cover-photo-blur div.user-bio {
+    font-size: 0.8rem;
+  }
+  /* div.banner-box div.cover-photo-blur > img {
+    height: 450px;
+  } */
+  }
+  div.no-user-slogan{
+    margin-top: 5rem;
+    text-align: center;
+  }
+  
+  @media (max-width: 850px) {
+  
+    div.banner-box div.cover-photo-blur div.cover-photo div.cover-pic > img {
+      border-radius: 13px;
+      height: 47vw;
+      width: 100%;
+    }
+  
+    div.banner-box div.cover-photo-blur div.profile-photo {
+      bottom: -7.8vw;
+    }
+  
+    div.banner-box div.cover-photo-blur div.profile-photo img {
+      border: 2px solid white;
+      width: 17vw;
+      height: 17vw;
+    }
+    div.banner-box div.mini-bar{
+      width: 100%;
+      
+    } 
+    div.banner-box div.cover-photo-blur > img {
+      height: 59vw;
+    }
+  }
+  

@@ -1,0 +1,179 @@
+body{
+    /* background-color: #fff; */
+}
+
+/* div.completetion-container{
+} */
+
+div.completetion-container div.title-132 h2{
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+div.completetion-container div.center{
+    width: 100%;
+}
+div.completetion-container div.input-items div.media-error p{
+    text-align: center;
+    color: red;
+}
+
+div.completetion-container div.media-preview{
+    position: relative;
+    /* display: inline-block; */
+    width: 190px;
+    margin: 0 auto;
+}
+div.completetion-container div.media-preview img{
+    border-radius: 50%;
+    box-shadow:  9px 9px 18px #9b9b9b,
+    -9px -9px 18px #ffffff;
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+}
+
+div.completetion-container div.media-preview div.change-profile-pic-icon input{
+    display: none;
+}
+
+div.completetion-container div.media-preview div.change-profile-pic-icon ion-icon{
+    position: absolute;
+    right: 5px;
+    bottom: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 7px;
+    font-size: 30px;
+    border: 2px solid rgb(122, 119, 119);;
+}
+div.completetion-container div.input-items div.gender-radio{
+margin: 20px 0px 10px 0px;
+text-align: center;
+font-size: 20px;
+}
+div.completetion-container div.input-items div.user-dob{
+margin: 20px 0px 10px 0px;
+text-align: center;
+font-size: 20px;
+
+}
+div.completetion-container div.input-items div.user-dob span{
+    margin-right: 20px;
+}
+div.completetion-container div.input-items div.user-dob input{
+    width: 325px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+}
+
+div.completetion-container div.input-items div.gender-radio span{
+    margin-right: 20px;
+}
+
+div.completetion-container div.input-items div.gender-radio input{
+    margin-right: 8px;
+   
+}
+div.completetion-container div.input-items div.gender-radio label.male-label{
+    margin-right: 20px;
+   
+}
+div.completetion-container div.input-items div.gender-radio label.female-label{
+    margin-right: 20px;
+   
+}
+
+div.completetion-container div.input-items div.user-bio{
+    text-align: center;
+}
+
+div.completetion-container div.input-items div.user-bio textarea{
+  margin: 20px auto 0 auto;
+  justify-self: center;
+  width: 390px;
+  outline: none;
+  padding: 10px;
+  height: 100px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+div.completetion-container div.user-signup{
+    margin: 0 auto;
+    display: inline-block;
+    justify-self: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+div.completetion-container div.user-signup button{
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 390px;
+    background-color: #5995fd;
+    color: #fff;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-weight: 500;
+}
+div.completetion-container div.user-signup button:hover{
+    background-color: #4486f7;;
+}
+
+@media (max-width:450px){
+    div.completetion-container div.input-items div.gender-radio{
+        font-size: 15px;
+        }
+        div.completetion-container div.input-items div.user-dob{
+        font-size: 15px;
+        
+        }
+        div.completetion-container div.input-items div.user-dob input{
+            width: 75%;
+            font-size: 12px;
+          
+        }
+        div.completetion-container div.input-items div.user-bio textarea{
+            width: 90%;
+            height: 90px;
+            border-radius: 6px;
+            font-size: 12px;
+          }
+          
+          div.completetion-container div.user-signup{
+              width: 100%;
+              margin-top: 20px;
+          }
+          
+          div.completetion-container div.user-signup button{
+              margin-bottom: 20px;
+              width: 90%;
+              border-radius: 25px;
+             
+          }
+
+          div.completetion-container div.media-preview{
+            width: 150px;
+        }
+
+          div.completetion-container div.media-preview img{
+            width: 150px;
+            height: 150px;
+        }
+        div.completetion-container div.media-preview div.change-profile-pic-icon ion-icon{
+           
+            /* right: 5px;
+            bottom: 30px; */
+            
+            padding: 7px;
+            font-size: 20px;
+           
+        }
+}

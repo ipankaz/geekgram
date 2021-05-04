@@ -1,0 +1,37 @@
+div.customDropDown{
+    background-color: #e0e0e0;
+    border-radius: 6px;
+    /* box-sizing: border-box; */
+    box-shadow:  9px 9px 18px #9b9b9b,
+             -9px -9px 18px #ffffff;
+             width: 100px;
+             padding: 12px;
+             position: absolute;
+             right: 20px;
+             top: 40px;
+}
+
+div.customDropDown div:nth-child(2){
+   color: red;
+}
+
+div.customDropDown div.option span{
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+@media (max-width:500px){
+    div.customDropDown div.option span{
+        font-size: 0.6rem;
+        
+      }
+
+      div.customDropDown{
+        border-radius: 6px;
+        box-shadow:  5px 5px 15px #9b9b9b,
+                 -7px -7px 15px #ffffff;
+        width: 80px;
+        padding: 6px;
+                 
+                 
+    }
+}

@@ -1,0 +1,37 @@
+div.userLikeBox div.userProfilePic img{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+div.userLikeBox{
+    display: flex;
+    margin-bottom: 12px;
+}
+div.userLikeBox span{
+    align-self: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: rgb(54, 49, 49);
+    
+}
+div.userLikeBox a:hover{
+   text-decoration: none;
+}
+
+@media (max-width:500px){
+    div.userLikeBox div.userProfilePic img{
+        width: 22px; 
+        margin-right: 10px;
+    }
+
+    div.userLikeBox span{
+        font-size: 0.7rem;
+
+    }
+
+    div.userLikeBox{
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,165 @@
+body{
+    background-color:#e0e0e0
+}
+
+.container-1{
+   /* background-color: bisque; */
+   margin-top:5rem
+}
+    
+
+.feed-1{
+    width: 500px;
+    /* width: 50vw; */
+    /* background-color: aqua; */
+    margin: 0 auto;
+}
+.feed-1 .createPostSection-1{
+    background-color: #e0e0e0;
+    display: flex;
+    padding: 15px 15px 0 15px;
+    /* margin: 15px; */
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow:  9px 9px 18px #9b9b9b,
+             -9px -9px 18px #ffffff;
+}
+.feed-1 .createPostSection-1 div.createBtn{
+    width:89%;
+}
+
+.feed-1 .createPostSection-1 div p{ 
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    /* width: 450px; */
+    width:100%;
+    /* height: 50px; */
+    cursor: pointer;
+    box-sizing: border-box;
+    padding-left: 20px;
+    /* margin-left: 20px; */
+    line-height: 50px;
+    /* line-height:  9vw; */
+    box-shadow: inset 9px 9px 18px #9b9b9b,
+            inset -9px -9px 18px #ffffff;
+    font-size:0.8rem
+}
+
+.feed-1 .createPostSection-1 .profilePic-1 img{
+    width: 50px;
+    border-radius: 50%;
+   margin-right: 10px;
+   
+}
+.profilePic-1 img{
+    width: 50px;
+    border-radius: 50%;
+   margin-right: 10px;
+   
+}
+.feed-1 .post-1{
+/* background-color: red; */
+}
+
+.profileModal{
+    display: flex;
+}
+.createPostModal .profileModal .usernameModal{
+    color:#696969;
+    align-self: center;
+}
+.createPostModal .descriptionModal{
+    width:100%;
+    height: 50px;
+    margin-top:10px;
+    outline:none;
+    border:none;
+    background-color: transparent;
+}
+.createPostModal .addMediaModal{
+    box-sizing: border-box;
+    /* border:1px solid #DCDCDC; */
+    border:1px solid rgb(56, 54, 54);
+    border-radius:5px;
+    padding: 15px;
+    margin-top:20px;
+    margin-bottom:10px;
+    display:flex;
+    position: relative;
+}
+.createPostModal div.addMediaModal ion-icon{
+    margin-right: 20px;
+}
+ion-icon{
+    position: absolute;
+    right: 0;
+    /* margin-right: 20px; */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+div.createPostModal div.mediaPreview img{
+    width: 100%;
+}
+div.createPostModal div.mediaPreview ion-icon{
+    margin-right: 20px;
+}
+
+.addMediaModal .mediaSpan{
+color: #696969;
+}
+.addMediaModal>input {
+    display: none;
+  }
+
+  div.mediaPreview{
+      border-radius: 7px;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+  }
+  div.mediaPreview img{
+      display: block;
+      margin: 0 auto;
+  }
+  div.mediaPreview .errorMessage{
+      color: red;
+  }
+  .removeMediaPreview ion-icon{
+      background-color:#DCDCDC;
+      border-radius:50%;
+      padding:5px;
+      position:absolute;
+      top:0;
+      margin-top:15px;
+      
+  }
+
+  div.no-post-slogan{
+   margin: 50px 0;
+   padding: 20px;
+   text-align: center;
+   border-radius: 8px;
+   box-sizing: border-box;
+   box-shadow:  9px 9px 18px #9b9b9b,
+            -9px -9px 18px #ffffff;
+  }
+  div.no-post-slogan span{
+      font-size: 1.5rem;
+     color: #696969;
+  }
+  .my-modal .modal-content {
+    background-color: #e0e0e0;
+  }
+  .my-modal .modal-content .modal-header{
+      padding: 0rem 1rem 0.4rem 1rem;
+  }
+  .my-modal .modal-content .modal-header .modal-title{
+      font-size: 1rem;
+  }
+
+  @media (max-width:500px){
+      .feed-1 {
+        width:100vw;
+      }
+  }
