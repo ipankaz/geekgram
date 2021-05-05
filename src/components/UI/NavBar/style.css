@@ -388,5 +388,48 @@
     text-align: center;
     padding: 20px;
   }
+
+  @media screen and (max-width: 500px) {
+    .search-container .search-input input{
+      padding: 10px 15px;
+      font-size: 12px;
+      border-radius: 25px;
+    }
+    .search-container .search-input .search-icon ion-icon{
+      position: absolute; 
+       top: 8px;
+      right: 15px;
+    }
+    .search-container .search-result{
+      width: 100%;
+      margin: 25px auto;
+      border-radius: 7px;
+    }
+  
+    .search-container .search-result .search-item{
+      padding: 10px;
+      border-radius: 7px;
+      margin-bottom: 15px;
+   
+    }
+    .search-container .search-result .search-item .profile-picture-0{
+      margin-right: 4px;
+    }
+    .search-container .search-result .search-item .profile-picture-0 img{
+        width: 35px;
+    }
+
+    .search-container .search-result .search-item .user-name-0 span{
+        padding: 7px;
+        font-size: 13px;
+    }
+    .search-container .search-result .no-result-slogan{
+     
+      border-radius: 4px;
+      font-size: 12px;
+      padding: 15px;
+    }
+    
+  }
   
   

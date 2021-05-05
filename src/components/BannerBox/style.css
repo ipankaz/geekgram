@@ -250,9 +250,21 @@ div.banner-box {
     height: 100px;
   }
   
-  /* div.banner-box div.cover-photo-blur > img {
-    height: 500px;
-  } */
+  div.banner-box div.cover-photo div.save-cover {
+    bottom: 0px;
+    right: 10px;
+    border-radius: 5px;
+    margin-bottom: 35px;
+  }
+  div.banner-box div.cover-photo div.save-cover ion-icon {
+    margin-top: 3px;
+    margin-right: 5px;
+    font-size: 10px;
+  }
+  div.banner-box div.cover-photo div.save-cover span {
+    padding: 4px 5px 4px 5px;
+    font-size: 10px;
+  }
   }
 
   @media (max-width: 600px) {

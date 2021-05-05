@@ -21,16 +21,14 @@ div.customDropDown div.option span{
 }
 @media (max-width:500px){
     div.customDropDown div.option span{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
         
       }
 
       div.customDropDown{
         border-radius: 6px;
-        box-shadow:  5px 5px 15px #9b9b9b,
-                 -7px -7px 15px #ffffff;
-        width: 80px;
-        padding: 6px;
+        width: 100px;
+        padding: 7px 7px 7px 10px
                  
                  
     }

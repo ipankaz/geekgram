@@ -6,8 +6,8 @@ const initState = {
     loading: false,
     done:false,
     posts:[],
-    searchedUser:[],
-    searchedQuery:[]
+    searchedUser:[]
+    // searchedQuery:[]
 }
 
 const userReducer=  (state = initState, action) => {
@@ -51,23 +51,23 @@ const userReducer=  (state = initState, action) => {
                    error:action.payload.error
                 }
                 break;
-            case userConstants.GET_USER_BY_FIRSTNAME_REQUEST:
-                state = {
-                    ...state,
-                }
-                break;
-            case userConstants.GET_USER_BY_FIRSTNAME_SUCCESS:
-                state = {
-                    ...state,
-                    searchedQuery:action.payload.users
-                }
-                break;
-            case userConstants.GET_USER_BY_FIRSTNAME_FAILURE:
-                state = {
-                    ...state,
-                    error:action.payload.error
-                }
-                break;
+            // case userConstants.GET_USER_BY_FIRSTNAME_REQUEST:
+            //     state = {
+            //         ...state,
+            //     }
+            //     break;
+            // case userConstants.GET_USER_BY_FIRSTNAME_SUCCESS:
+            //     state = {
+            //         ...state,
+            //         searchedQuery:action.payload.users
+            //     }
+            //     break;
+            // case userConstants.GET_USER_BY_FIRSTNAME_FAILURE:
+            //     state = {
+            //         ...state,
+            //         error:action.payload.error
+            //     }
+            //     break;
 
             case userConstants.GET_USER_BY_USERNAME_REQUEST:
                 state = {

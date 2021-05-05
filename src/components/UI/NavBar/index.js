@@ -21,7 +21,7 @@ const NavBar = (props) => {
   const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const auth = useSelector((state) => state.auth);
-  const searchedUser = useSelector((state) => state.user.searchedQuery);
+  const searchedUser = useSelector((state) => state.searchedUser.searchedQuery);
 
   const showMenu = () => {
     if (navClass === "nav") {

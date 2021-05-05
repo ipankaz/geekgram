@@ -50,7 +50,7 @@ const HomePage = (props) => {
       }
       data = false;
     }
-  }, [auth.authenticate, dispatch, props.user]);
+  }, [auth.authenticate,dispatch, props.user]);
 
   const allPosts = useSelector((state) => state.post);
   const userPosts = useSelector((state) => state.user);

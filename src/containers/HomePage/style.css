@@ -61,6 +61,8 @@ body{
 /* background-color: red; */
 }
 
+/* create post modal s */
+
 .profileModal{
     display: flex;
 }
@@ -161,5 +163,71 @@ color: #696969;
   @media (max-width:500px){
       .feed-1 {
         width:100vw;
+      }
+
+      .feed-1 .createPostSection-1{
+        padding: 10px 10px 0 10px;
+        border-radius: 5px;
+    }
+    .feed-1 .createPostSection-1 div.createBtn{
+        width:89%;
+    }
+    
+    .feed-1 .createPostSection-1 div p{ 
+        border-radius: 5px;
+        line-height: 40px;
+        box-shadow: inset 9px 9px 18px #9b9b9b,
+                inset -9px -9px 18px #ffffff;
+        font-size:0.7rem;
+        margin-bottom:0.8rem
+    }
+    .feed-1 .createPostSection-1 .profilePic-1{
+        margin-right: 10px;
+    }
+    
+    .feed-1 .createPostSection-1 .profilePic-1 img{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        
+       
+    }
+
+    /* create post modal  */
+    .profileModal .profilePic-1 img{
+       width: 40px;
+    }
+
+    .createPostModal .profileModal .usernameModal{
+       font-size: 15px;
+    }
+    .createPostModal .descriptionModal{
+        width:100%;
+        height: 40px;
+        margin-top:9px;
+        font-size: 12px;
+    }
+    .createPostModal .addMediaModal{
+        padding: 10px;
+        margin-top:15px;
+        margin-bottom:7px;
+    }
+    .createPostModal .addMediaModal span{
+        font-size: 13px;
+    }
+    .createPostModal div.addMediaModal ion-icon{
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    
+    div.createPostModal div.mediaPreview img{
+        width: 100%;
+    }
+    div.createPostModal div.mediaPreview ion-icon{
+        font-size: 15px;
+    }
+    
+      div.mediaPreview .errorMessage{
+          font-size: 13px;
       }
   }

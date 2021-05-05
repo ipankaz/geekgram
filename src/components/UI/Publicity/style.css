@@ -64,4 +64,40 @@
     .publicity-container-0 .publicity-box-0{
         width: 95%;
     }
+    .publicity-container-0 .publicity-box-0 .publicity-item-0{
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        
+      }
+      .publicity-box-0 .publicity-item-0 .profile-picture-0 img{
+          width: 35px;
+          border-radius: 50%;
+      }
+      
+      .publicity-box-0 .publicity-item-0 .user-name-0 span{
+          font-size: 13px;
+      }
+      .publicity-box-0 .publicity-item-0 .publicity-change-0{
+        padding: 7px 12px;
+        border-radius: 30px;
+      }
+      
+      .publicity-box-0 .publicity-item-0 .publicity-change-0 .publicity-work-0{
+         position: relative;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        /* grid-gap: 5px; */
+      }
+      .publicity-box-0 .publicity-item-0 .publicity-change-0 .publicity-work-0 span{
+         font-size: 11px;
+      }
+      
+      .publicity-box-0 .publicity-item-0 .publicity-change-0 .publicity-work-0 .publicity-icon-0 ion-icon{
+          position: absolute;
+          right: 2px;
+          top: 2px;
+          font-size: 14px;
+          text-align: center;
+      }
 }
