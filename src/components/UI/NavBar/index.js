@@ -23,6 +23,20 @@ const NavBar = (props) => {
   const auth = useSelector((state) => state.auth);
   const searchedUser = useSelector((state) => state.searchedUser.searchedQuery);
 
+  const pathname = window.location.pathname;
+
+  let class1 = "nav_link";
+  let class2 = "nav_link";
+  let class3 = "nav_link";
+
+  if (pathname === `/`) {
+    class1 = "nav_link active-1";
+  } else if (pathname === `/about`) {
+    class2 = "nav_link active-1";
+  } else if (auth.user && pathname === `/profile/${auth.user.username}`) {
+    class3 = "nav_link active-1";
+  }
+
   const showMenu = () => {
     if (navClass === "nav") {
       setNavClass("nav show");
@@ -135,7 +149,7 @@ const NavBar = (props) => {
             <div className="nav_menu">
               <ul className="nav_list">
                 <li className="nav_item">
-                  <NavLink exact to="/" className="nav_link active-1">
+                  <NavLink  exact to="/" className={class1}>
                     Home
                   </NavLink>
                 </li>
@@ -154,14 +168,15 @@ const NavBar = (props) => {
                   
                 </li>
                 <li className="nav_item">
-                  <NavLink to="/about" className="nav_link">
+                  <NavLink to="/about"  className={class2}>
                     About
                   </NavLink>
                 </li>
                 <li className="nav_item">
                 <NavLink
                     to={`/profile/${auth.user && auth.user.username}`}
-                    className="nav_link"
+                    className={class3}
+                   
                   >
                     My Profile
                   </NavLink>
