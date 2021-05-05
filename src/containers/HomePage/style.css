@@ -166,7 +166,7 @@ color: #696969;
       }
 
       .feed-1 .createPostSection-1{
-        padding: 10px 10px 0 10px;
+        padding: 12px;
         border-radius: 5px;
     }
     .feed-1 .createPostSection-1 div.createBtn{
@@ -175,14 +175,15 @@ color: #696969;
     
     .feed-1 .createPostSection-1 div p{ 
         border-radius: 5px;
-        line-height: 40px;
+        line-height: 45px;
         box-shadow: inset 9px 9px 18px #9b9b9b,
                 inset -9px -9px 18px #ffffff;
         font-size:0.7rem;
-        margin-bottom:0.8rem
+        margin-bottom:0rem
     }
     .feed-1 .createPostSection-1 .profilePic-1{
         margin-right: 10px;
+        align-self: center;
     }
     
     .feed-1 .createPostSection-1 .profilePic-1 img{
