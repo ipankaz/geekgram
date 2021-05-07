@@ -62,9 +62,13 @@
   form.sig-in-form-123 {
     z-index: 2;
   }
-  form.sig-in-form-123 p{
+  form.sig-in-form-123 p.signup-done{
     margin-bottom: 50px;
     color: #28a745;
+  }
+  form.sig-in-form-123 p.signup-message{
+    margin-bottom: 50px;
+    color: red;
   }
   
   .title-123 {
@@ -247,6 +251,12 @@
   
   .container-123.sign-up-mode-123 .right-panel-123 {
     pointer-events: all;
+  }
+
+  .signin-signup-123 .login-message{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   @media (max-width: 870px) {

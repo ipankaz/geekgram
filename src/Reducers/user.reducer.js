@@ -31,6 +31,7 @@ const userReducer=  (state = initState, action) => {
                 ...state,
                 loading: false,
                 done:false,
+                message:action.payload.message,
                 error: action.payload.error
             }
             break;

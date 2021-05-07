@@ -9,11 +9,10 @@ export const signup = (form)=>{
         })
         const res = await axios.post('signup',form)
         if(res.status===201){
-            const {message}=res.data
             dispatch({
                 type:userConstants.USER_REGISTER_SUCCESS,
                 payload:{
-                 message
+                 message:res.data.message
                 }
             })
         }else{
@@ -21,7 +20,8 @@ export const signup = (form)=>{
                 dispatch({
                     type:userConstants.USER_REGISTER_FAILURE,
                     payload:{
-                       error:res.data.error
+                       error:res.data.error,
+                       message:res.data.message
                     }
                 })
             }

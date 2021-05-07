@@ -72,7 +72,9 @@ const LoginSignup = (props) => {
             {/* Signin Form  */}  
 
           <form onSubmit={submitSigninBtn} className="sig-in-form-123">
-            {(user.done) && <p>Signed up Successfully, now Signin</p>}
+            {(user.done) && <p className="signup-done">Signed up Successfully, now Signin</p>}
+            {(user.message) && <p className="signup-message">{user.message}. Try Again !</p>}
+            {(user.error) && <p className="signup-message">{user.error}</p>}
             <h2 className="title-123">SIGNIN</h2>
             <Input
               type="text"
@@ -89,6 +91,8 @@ const LoginSignup = (props) => {
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
+             {(auth.message) && <p className="login-message">{auth.message}</p>}
+             {(auth.error) && <p className="login-message">{auth.error}. Try Again !</p>}
             <input type="submit" value="Login" className="btn-123 solid" />
           </form>
 
@@ -143,7 +147,8 @@ const LoginSignup = (props) => {
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
-            <input type="submit" value="Signup" className="btn-123 solid" />
+            <input type="submit" value="Next Step" className="btn-123 solid" />
+            {/* <div className="btn-123 solid">signup</div> */}
           </form>
         </div>
       </div>
