@@ -8,11 +8,22 @@ import NewModal from "../Modal";
 import { Container } from "react-bootstrap";
 import userMale from "../../../Media/user-male.gif";
 import { generatePublicUrl } from "../../../urlConfig";
-
+import PropagateLoader from "react-spinners/PropagateLoader";
+import { css } from "@emotion/core";
 /**
  * @author
  * @function NavBar
  **/
+
+const override = css`
+  border-color: red;
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 40px;
+  margin-bottom: 10px;
+`;
 
 const NavBar = (props) => {
   const dispatch = useDispatch();
@@ -21,7 +32,7 @@ const NavBar = (props) => {
   const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const auth = useSelector((state) => state.auth);
-  const searchedUser = useSelector((state) => state.searchedUser.searchedQuery);
+  const searchedUser = useSelector((state) => state.searchedUser);
 
   const pathname = window.location.pathname;
 
@@ -56,18 +67,17 @@ const NavBar = (props) => {
 
   const handleClose = () => {
     setShow(false);
-    setSearchQuery("")
+    setSearchQuery("");
     dispatch(getUserByFirstName("1"));
   };
 
   const handleSearchQuery = (e) => {
     setSearchQuery(e.target.value);
-    if(e.target.value!==""){
+    if (e.target.value !== "") {
       dispatch(getUserByFirstName(e.target.value));
-    }else{
+    } else {
       dispatch(getUserByFirstName("1"));
     }
-   
   };
 
   const renderSearchUserModal = () => {
@@ -91,24 +101,54 @@ const NavBar = (props) => {
                 <ion-icon name="search-outline"></ion-icon>
               </div>
             </div>
-
-            <div className="search-result">
-              {searchedUser.length > 0 ?
-                searchedUser.map((element, index) => (
-                  <div key={index} className="search-item">
-                    <div className="profile-picture-0">
-                      <a href={`/profile/${element.username}`}>
-                        <img src={element.profilePicture && element.profilePicture.img!=="" ? generatePublicUrl(element.profilePicture.img) : userMale} alt="profile"></img>
-                      </a>
+            {searchedUser.loading ? (
+                <div className="loader">
+                  <PropagateLoader
+                    color={"#007bff"}
+                    loading={searchedUser.loading}
+                    css={override}
+                    size={12}
+                  ></PropagateLoader>
+                </div>) : 
+                <div className="search-result">
+                <>
+                  {searchedUser.searchedQuery.length > 0 ? (
+                    searchedUser.searchedQuery.map((element, index) => (
+                      <div key={index} className="search-item">
+                        <div className="profile-picture-0">
+                          <a href={`/profile/${element.username}`}>
+                            <img
+                              src={
+                                element.profilePicture &&
+                                element.profilePicture.img !== ""
+                                  ? generatePublicUrl(
+                                      element.profilePicture.img
+                                    )
+                                  : userMale
+                              }
+                              alt="profile"
+                            ></img>
+                          </a>
+                        </div>
+                        <div className="user-name-0">
+                          <a href={`/profile/${element.username}`}>
+                            <span>
+                              {element.firstName} {element.lastName}
+                            </span>
+                          </a>
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    <div className="no-result-slogan">
+                      <span> No Results</span>
                     </div>
-                    <div className="user-name-0">
-                      <a href={`/profile/${element.username}`}>
-                        <span>{element.firstName} {element.lastName}</span>
-                      </a>
-                    </div>
-                  </div>
-                )) : <div className="no-result-slogan"><span> No Results</span></div>}
+                  )}
+                </>
             </div>
+                }
+            
+
           </div>
         </Container>
       </NewModal>
@@ -149,7 +189,7 @@ const NavBar = (props) => {
             <div className="nav_menu">
               <ul className="nav_list">
                 <li className="nav_item">
-                  <NavLink  exact to="/" className={class1}>
+                  <NavLink exact to="/" className={class1}>
                     Home
                   </NavLink>
                 </li>
@@ -165,18 +205,16 @@ const NavBar = (props) => {
                     Search
                   </span>
                   {/* </NavLink> */}
-                  
                 </li>
                 <li className="nav_item">
-                  <NavLink to="/about"  className={class2}>
+                  <NavLink to="/about" className={class2}>
                     About
                   </NavLink>
                 </li>
                 <li className="nav_item">
-                <NavLink
+                  <NavLink
                     to={`/profile/${auth.user && auth.user.username}`}
                     className={class3}
-                   
                   >
                     My Profile
                   </NavLink>
@@ -198,7 +236,6 @@ const NavBar = (props) => {
             </div>
           </div>
         </nav>
-       
       </header>
       {renderSearchUserModal()}
       {/* <Row>{props.children}</Row> */}

@@ -37,18 +37,21 @@ const userReducer=  (state = initState, action) => {
             case postConstants.GET_ALL_USER_POST_SUCCESS:
                 state = {
                     ...state,
+                   
                     posts: action.payload.posts
                 }
                 break;
             case postConstants.GET_ALL_USER_POST_REQUEST:
                 state = {
                     ...state,
+                   
                 }
                 break;
             case postConstants.GET_ALL_USER_POST_FAILURE:
                 state = {
                     ...state,
-                   error:action.payload.error
+                   error:action.payload.error,
+                  
                 }
                 break;
             // case userConstants.GET_USER_BY_FIRSTNAME_REQUEST:
@@ -72,17 +75,20 @@ const userReducer=  (state = initState, action) => {
             case userConstants.GET_USER_BY_USERNAME_REQUEST:
                 state = {
                     ...state,
+                    loading:true
                 }
                 break;
             case userConstants.GET_USER_BY_USERNAME_SUCCESS:
                 state = {
                     ...state,
+                    loading:false,
                     searchedUser:action.payload.users
                 }
                 break;
             case userConstants.GET_USER_BY_USERNAME_FAILURE:
                 state = {
                     ...state,
+                    loading:false,
                     error:action.payload.error
                 }
                 break;

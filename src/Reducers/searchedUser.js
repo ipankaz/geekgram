@@ -1,7 +1,8 @@
 import { userConstants } from "../Actions/constants"
 
 const initState = {
-    searchedQuery:[]
+    searchedQuery:[],
+    loading:false
 }
 
 const searchedUserReducer=  (state = initState, action) => {
@@ -11,17 +12,20 @@ const searchedUserReducer=  (state = initState, action) => {
             case userConstants.GET_USER_BY_FIRSTNAME_REQUEST:
                 state = {
                     ...state,
+                    loading:true
                 }
                 break;
             case userConstants.GET_USER_BY_FIRSTNAME_SUCCESS:
                 state = {
                     ...state,
+                    loading:false,
                     searchedQuery:action.payload.users
                 }
                 break;
             case userConstants.GET_USER_BY_FIRSTNAME_FAILURE:
                 state = {
                     ...state,
+                    loading:false,
                     error:action.payload.error
                 }
                 break;

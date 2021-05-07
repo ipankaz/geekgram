@@ -1,7 +1,8 @@
 import { postConstants } from "../Actions/constants";
 
 const initialState = {
-    posts: []
+    posts: [],
+    loading:false
 };
 
 const postReducer =  (state = initialState, action) => {
@@ -9,18 +10,21 @@ const postReducer =  (state = initialState, action) => {
         case postConstants.GET_ALL_POST_SUCCESS:
             state = {
                 ...state,
+                loading:false,
                 posts: action.payload.posts
             }
             break;
         case postConstants.GET_ALL_POST_REQUEST:
             state = {
                 ...state,
+                loading:true
             }
             break;
         case postConstants.GET_ALL_POST_FAILURE:
             state = {
                 ...state,
-               error:action.payload.error
+               error:action.payload.error,
+               loading:false
             }
             break;
          default : state={...state}

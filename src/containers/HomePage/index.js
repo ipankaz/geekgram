@@ -17,11 +17,20 @@ import CommentBox from "../../components/UI/CommentBox";
 import LikeBox from "../../components/UI/LikeBox";
 import { generatePublicUrl } from "../../urlConfig";
 import userPicture from "../../Media/default-user.png";
+import PacmanLoader from "react-spinners/PacmanLoader";
+import { css } from "@emotion/core";
 /**
  * @author
  * @function HomePage
  **/
 let data = true;
+const override = css`
+  border-color: red;
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+`;
 const HomePage = (props) => {
   const [description, setDescription] = useState("");
   const [show, setShow] = useState(false);
@@ -50,7 +59,7 @@ const HomePage = (props) => {
       }
       data = false;
     }
-  }, [auth.authenticate,dispatch, props.user]);
+  }, [auth.authenticate, dispatch, props.user]);
 
   const allPosts = useSelector((state) => state.post);
   const userPosts = useSelector((state) => state.user);
@@ -427,71 +436,81 @@ const HomePage = (props) => {
   return (
     <>
       {pathname === "/" && <NavBar></NavBar>}
-      <div className="container-1">
-        <div className="feed-1">
-          {!props.differentUser && (
-            <div className="createPostSection-1">
-              <div className="profilePic-1">
-                <img
-                  src={
-                    auth.user.profilePicture &&
-                    auth.user.profilePicture.img !== ""
-                      ? generatePublicUrl(auth.user.profilePicture.img)
-                      : userPicture
-                  }
-                  alt="profile pic"
-                ></img>
-              </div>
-              <div className="createBtn">
-                <p onClick={handleShow}>Write something here...</p>
-              </div>
-            </div>
-          )}
-          <div className="posts-1">
-            {/* All Post Feed goes here */}
-
-            {decidedPosts.posts.length > 0 ? (
-              decidedPosts.posts.map((post, index) => {
-                return (
-                  <PostFeed
-                    post={post}
-                    id={post._id}
-                    key={index}
-                    index={index}
-                    user={post.user}
+      {pathname === "/" && (
+        <PacmanLoader
+          color={"#007bff"}
+          loading={allPosts.loading}
+          css={override}
+          size={50}
+        ></PacmanLoader>
+      )}
+      {!allPosts.loading && (
+        <div className="container-1">
+          <div className="feed-1">
+            {!props.differentUser && (
+              <div className="createPostSection-1">
+                <div className="profilePic-1">
+                  <img
                     src={
-                      post.user.profilePicture &&
-                      post.user.profilePicture.img !== ""
-                        ? generatePublicUrl(post.user.profilePicture.img)
+                      auth.user.profilePicture &&
+                      auth.user.profilePicture.img !== ""
+                        ? generatePublicUrl(auth.user.profilePicture.img)
                         : userPicture
                     }
-                    description={post.description && post.description}
-                    uploadedMedia={
-                      post.pictures.length > 0 && post.pictures[0].img
-                    }
-                    fullName={`${post.user.firstName} ${post.user.lastName}`}
-                    likes={post.likes}
-                    comments={post.comments}
-                    onChange={handleCommentBoxModal}
-                    onLikeChange={handleLikeBoxaModal}
-                    onDeleteChange={handleDeletePostModal}
-                    onEditChange={handleEditPostModal}
-                  />
-                );
-              })
-            ) : (
-              <div className="no-post-slogan">
-                <span>Oopps! Such Empty.</span>
+                    alt="profile pic"
+                  ></img>
+                </div>
+                <div className="createBtn">
+                  <p onClick={handleShow}>Write something here...</p>
+                </div>
               </div>
             )}
+            <div className="posts-1">
+              {/* All Post Feed goes here */}
+
+              {decidedPosts.posts.length > 0 ? (
+                decidedPosts.posts.map((post, index) => {
+                  return (
+                    <PostFeed
+                      post={post}
+                      id={post._id}
+                      key={index}
+                      index={index}
+                      user={post.user}
+                      src={
+                        post.user.profilePicture &&
+                        post.user.profilePicture.img !== ""
+                          ? generatePublicUrl(post.user.profilePicture.img)
+                          : userPicture
+                      }
+                      description={post.description && post.description}
+                      uploadedMedia={
+                        post.pictures.length > 0 && post.pictures[0].img
+                      }
+                      fullName={`${post.user.firstName} ${post.user.lastName}`}
+                      likes={post.likes}
+                      comments={post.comments}
+                      onChange={handleCommentBoxModal}
+                      onLikeChange={handleLikeBoxaModal}
+                      onDeleteChange={handleDeletePostModal}
+                      onEditChange={handleEditPostModal}
+                    />
+                  );
+                })
+              ) : (
+                <div className="no-post-slogan">
+                  <span>Oopps! Such Empty.</span>
+                </div>
+              )}
+            </div>
           </div>
+          {renderCreatePostModal()}
+          {renderCommentBoxModal()}
+          {renderLikeBoxModal()}
+          {renderConfirmPostDeleteModal()}
+          {renderEditPostModal()}
         </div>
-        {renderCreatePostModal()}
-        {renderCommentBoxModal()}
-        {renderLikeBoxModal()}
-        {renderConfirmPostDeleteModal()}
-        {renderEditPostModal()}
-      </div>
+      )}
     </>
   );
 };
