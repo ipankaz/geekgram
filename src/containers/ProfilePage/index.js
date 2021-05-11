@@ -6,7 +6,7 @@ import coverPhoto from "../../Media/cover-photo.jpeg";
 import profilePic from "../../Media/profilePic.jpg";
 import { useSelector,useDispatch } from "react-redux";
 import {getUserByUserName, getUserPosts} from '../../Actions/user.action.js'
-import PacmanLoader from "react-spinners/PacmanLoader";
+import BounceLoader from "react-spinners/BounceLoader";
 import { css } from "@emotion/core";
 /**
  * @author
@@ -18,7 +18,7 @@ import { css } from "@emotion/core";
  z-index:1000;
  position:absolute;
  top:50%;
- left:40%;
+ left:48%;
 `;
 
 const ProfilePage = (props) => {
@@ -43,7 +43,7 @@ const ProfilePage = (props) => {
 
   return (
     <div className="profile-page">
-      <PacmanLoader color={'#007bff'} loading={user.loading} css={override} size={50}></PacmanLoader>
+      <BounceLoader color={'#007bff'} loading={user.loading} css={override} size={40}></BounceLoader>
       {!user.loading && 
       <>
       <NavBar></NavBar>

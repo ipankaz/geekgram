@@ -7,9 +7,9 @@ import React from "react";
 
 const Input = (props) => {
   return (
-    <div className="input-field-123">
+    <div style={props.style} className="input-field-123">
       <i className={props.iclassname}></i>
-      <input type={props.type} placeholder={props.placeholder} value={props.value} onChange={props.onChange} />
+      <input  type={props.type} maxLength={props.max} placeholder={props.placeholder} value={props.value} onChange={props.onChange} />
     </div>
   );
 };

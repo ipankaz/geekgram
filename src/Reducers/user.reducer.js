@@ -3,6 +3,8 @@ import { userConstants ,postConstants} from "../Actions/constants"
 const initState = {
     error: null,
     message: '',
+    validateMessage:'',
+    validateError:'',
     loading: false,
     done:false,
     posts:[],
@@ -33,6 +35,24 @@ const userReducer=  (state = initState, action) => {
                 done:false,
                 message:action.payload.message,
                 error: action.payload.error
+            }
+            break;
+        case userConstants.USER_SIGNUP_AUTHENTICATION_REQUEST:
+            state = {
+                ...state,
+            }
+            break;
+        case userConstants.USER_SIGNUP_AUTHENTICATION_SUCCESS:
+            state = {
+                ...state,
+                validateMessage: action.payload.message
+            }
+            break;
+        case userConstants.USER_SIGNUP_AUTHENTICATION_FAILURE:
+            state = {
+                ...state,
+                validateMessage:action.payload.message,
+                validateError: action.payload.error
             }
             break;
             case postConstants.GET_ALL_USER_POST_SUCCESS:

@@ -17,7 +17,7 @@ import CommentBox from "../../components/UI/CommentBox";
 import LikeBox from "../../components/UI/LikeBox";
 import { generatePublicUrl } from "../../urlConfig";
 import userPicture from "../../Media/default-user.png";
-import PacmanLoader from "react-spinners/PacmanLoader";
+import BounceLoader from "react-spinners/BounceLoader";
 import { css } from "@emotion/core";
 /**
  * @author
@@ -29,7 +29,7 @@ const override = css`
   z-index: 1000;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 48%;
 `;
 const HomePage = (props) => {
   const [description, setDescription] = useState("");
@@ -437,12 +437,12 @@ const HomePage = (props) => {
     <>
       {pathname === "/" && <NavBar></NavBar>}
       {pathname === "/" && (
-        <PacmanLoader
+        <BounceLoader
           color={"#007bff"}
           loading={allPosts.loading}
           css={override}
-          size={50}
-        ></PacmanLoader>
+          size={40}
+        ></BounceLoader>
       )}
       {!allPosts.loading && (
         <div className="container-1">

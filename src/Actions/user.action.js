@@ -31,6 +31,35 @@ export const signup = (form)=>{
     }
 
 }
+export const signupAuthentication = (query)=>{
+    return async (dispatch)=>{
+        dispatch({
+            type:userConstants.USER_SIGNUP_AUTHENTICATION_REQUEST
+        })
+        const res = await axios.post('signup/authentication',query)
+        if(res.status===200){
+            dispatch({
+                type:userConstants.USER_SIGNUP_AUTHENTICATION_SUCCESS,
+                payload:{
+                 message:res.data.message
+                }
+            })
+        }else{
+            if(res.status===400){
+                dispatch({
+                    type:userConstants.USER_SIGNUP_AUTHENTICATION_FAILURE,
+                    payload:{
+                       error:res.data.error,
+                       message:res.data.message
+                    }
+                })
+            }
+        }
+
+
+    }
+
+}
 export const getUserPosts = (userId) => {
     return async (dispatch) => {
       try {

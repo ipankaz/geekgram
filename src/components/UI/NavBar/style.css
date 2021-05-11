@@ -173,6 +173,7 @@
   .nav_link {
     color: var(--white-color);
     text-decoration: none;
+    cursor: pointer;
   }
   
   .nav_social {
@@ -276,6 +277,7 @@
       padding: .5rem .8rem;
       border-radius: .25rem;
       text-decoration: none;
+      cursor: pointer;
     }
     .nav_link:hover {
       background-color: var(--first-color);
